@@ -11,6 +11,8 @@ public class DiscountApp {
         Client client3 = new Client(null, "Nowak", false);
         double price3=1200;
 
+        Client client5 = new Client("Adam", null, false);
+        double price5 =1000;
 
         Client client4 = new Client(null, null, false);
         double price4=1200;
@@ -20,6 +22,7 @@ public class DiscountApp {
         double priceDiscount2 = discountService.calculateDiscountPrice(client2, price2);
         double priceDiscount3 = discountService.calculateDiscountPrice(client3, price3);
         double priceDiscount4 = discountService.calculateDiscountPrice(client4, price4);
+        double priceDiscount5 = discountService.calculateDiscountPrice(client5, price5);
 
 
         PrintService print = new PrintService();
@@ -30,6 +33,8 @@ public class DiscountApp {
         print.printService(client3, price3, priceDiscount3);
         System.out.println();
         print.printService(client4, price4, priceDiscount4);
+        System.out.println();
+        print.printService(client5, price5, priceDiscount5);
     }
 
 }
